@@ -1,6 +1,7 @@
 import React from 'react'
 
 function SignIn() {
+    // validate creds
     return (
         <div>
             <h1>Please enter the password to continue:</h1>

@@ -2,6 +2,7 @@ import React from 'react'
 import './SubmitPost.css'
 
 function SubmitPost() {
+    // handleSubmit
     return (
         <div id='post-box'>
                 <form id='submit-post'>
