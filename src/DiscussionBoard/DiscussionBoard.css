@@ -1,0 +1,23 @@
+#discussion {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+#board {
+    text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+    #discussion {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    #board {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
