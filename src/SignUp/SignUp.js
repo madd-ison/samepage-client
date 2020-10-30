@@ -1,35 +1,52 @@
 import React, {useState} from 'react'
 import './SignUp.css'
+import AuthApiService from '../services/auth-api-service'
 
 function SignUp() {
-    // const [name, setName] = useState('')
-    // const [password, setPassword] = useState('')
-
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+  
     const handleSubmit = async e => {
-        e.preventDefault()
-        try {
-
-        } catch (err) {
-            console.error(err.message)
-        }
-        window.location = '/:id'
+      e.preventDefault()
+      try {
+        const {username, password} = e.target
+        AuthApiService.postUser({
+            username: username.value,
+            password: password.value,
+        }) 
+            .then(user => {
+                username.value = ''
+                password.value = ''
+                alert('Thanks for registering! Please log in to your new account.')
+                window.location = '/login'
+            })
+    } catch (err) {
+        console.error(err.message)
     }
+  }
     return (
         <div id='signup-box'>
             <form id='signup-form' onSubmit={handleSubmit}>
-                <label htmlFor='convo-name'>Name your conversation:</label>
+                <label htmlFor='username'>Name your conversation:</label>
                 <br />
-                    <input type='text' 
-                        name='name'
-                        // onChange={e => setName(e.target.value)}
+                    <input 
+                        id='user-name'
+                        type='text' 
+                        name='username'
+                        value={username}
+                        onChange={e => setUsername(e.target.value)}
+                        required
                     />
                 <br />
                 <label htmlFor='password'>Create a password to share with your team:</label>
                 <br /> 
-                    <input type='text' 
-                        name='password'
-                        // onChange={e => setPassword(e.target.value)}
-                        required
+                <input
+                    id='user-password'
+                    name='password'
+                    type='password'
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
+                    required
                     />
                 <br />
                 <button type='submit'>Start Planning!</button>
