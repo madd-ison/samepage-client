@@ -30,9 +30,9 @@ function Login() {
     return (
         <section className='login-form'>
         <form onSubmit={handleSubmitJwtAuth}>
-        <div>
             <label htmlFor='username'>
-                Name: 
+                Name: </label>
+                <br />
                 <input 
                     type="text" 
                     name="username"
@@ -40,19 +40,17 @@ function Login() {
                     onChange={e => setUsername(e.target.value)}
                     required 
                     />
-            </label>
-            </div>
-            <div>
+                    <br />
             <label htmlFor='password'>
-                Password: 
+                Password: </label>
+                <br />
                 <input 
                     type="password" 
                     name="password"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                     required/>
-            </label>
-            </div>
+                    <br />
             <button type='submit'>Login</button>
       </form>
       {loggingIn ? 
