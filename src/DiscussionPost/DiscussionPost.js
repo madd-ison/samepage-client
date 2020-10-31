@@ -26,7 +26,6 @@ const DiscussionPost = () => {
         }
     }
 
-
     const getMessages = async () => {
         try {
             const response = await fetch(`${config.API_ENDPOINT}/api/messages`, {
@@ -48,11 +47,11 @@ const DiscussionPost = () => {
     }, [])
 
     return (
-        <div>
+        <div id='board'>
            {messages.map(message => (
-               <section key={message.id}>
-                   <h3>{moment(message.date).format('MMMM Do YYYY, h:mm:ss a')}</h3>
-                   <p>{message.author}</p>
+               <section id='post' key={message.id}>
+                   <p>{moment(message.date).format('MMMM Do YYYY, h:mm:ss a')}</p>
+                   <h3>{message.author}</h3>
                    <p>{message.content}</p>
                    <button onClick={() => deletePost(message.id)}>Delete</button>
                </section>

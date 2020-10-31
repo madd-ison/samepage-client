@@ -1,5 +1,5 @@
 import React from 'react'
-import {Switch, Link} from 'react-router-dom'
+import {Switch} from 'react-router-dom'
 import './App.css';
 import LandingPage from '../LandingPage/LandingPage';
 import SignUp from '../SignUp/SignUp';
@@ -15,9 +15,9 @@ function App() {
   return (
     <div className="App">
       <main>
-      <div className='login'>
+      <div className='logout'>
       {TokenService.hasAuthToken() ? 
-        <Logout /> : <Link to='/login'><button>Log In</button></Link>}
+        <Logout /> : null}
       </div>
       <div className='header'>
         {TokenService.hasAuthToken() ? 

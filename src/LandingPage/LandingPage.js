@@ -1,26 +1,24 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './LandingPage.css'
-import placeholder from './placeholder.jpg'
+import pic from '../img/example.png'
 
 function LandingPage() {
     return (
             <div id='landing'>
-            <h1>Make sure you're all on the samePage.</h1>
-            <h2>Free and easy. Start your group discussion now:</h2>
-            <Link to='/signup'><button>START YOUR PAGE</button></Link>
-                <section id='demo'>
-                    <h1>Plan your project,</h1>
-                    <img src={placeholder} alt='placeholder' />
-                </section>
-                <section id='demo'>
-                    <img src={placeholder} alt='placeholder' />
-                    <h1>plan your vacation,</h1>
-                </section>
-                <section id='demo'>
-                    <h1>plan <i>anything</i></h1>
-                    <img src={placeholder} alt='placeholder'/>
-                </section>
+                <h2>Make sure you're on the</h2>
+                <h1 id='samepage'>samePage.</h1>
+                    <h4>Free & easy. Start your group discussion now:</h4>
+                    <Link to='/signup'><button>START YOUR PAGE</button></Link>
+                    <Link to='/login'><button id='login-btn'>Log In</button></Link>
+                    <section id='example'>
+                        <div id='ex-text'>
+                            <h1>Projects, vacations, evenings, <i>anything</i>.</h1>
+                        </div>
+                        <div id='ex-img'>
+                            <img src={pic} alt='placeholder' />
+                        </div>
+                    </section>
             </div>
     )
 }

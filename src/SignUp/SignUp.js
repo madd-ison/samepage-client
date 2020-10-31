@@ -17,7 +17,6 @@ function SignUp() {
             .then(user => {
                 username.value = ''
                 password.value = ''
-                alert('Thanks for registering! Please log in to your new account.')
                 window.location = '/login'
             })
     } catch (err) {
@@ -49,6 +48,12 @@ function SignUp() {
                     required
                     />
                 <br />
+                <p id='password'>Password must be 6 characters or longer and include:</p>
+                <ul>
+                    <li>A capital letter</li>
+                    <li>A number</li>
+                    <li>A special character (i.e. $!@)</li>
+                </ul>
                 <button type='submit'>Start Planning!</button>
             </form>
         </div>

@@ -3,8 +3,10 @@
 }
 
 #post {
-    border: 2px solid pink;
+    background: rgb(243, 243, 161);
+    border-radius: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 20px 0 #383a383b;
 }

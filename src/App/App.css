@@ -1,29 +1,36 @@
 .App, body {
-  background-color: rgb(133, 205, 203);
+  background-color: #fff;
 }
 
 input {
   margin: 20px auto;
+  border-radius: 5px;
 }
 
-.login {
+.logout {
   text-align: right;
+  padding: 10px;
 }
 
 button {
   border: none;
   outline: none;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 50px;
   color: #333;
   background: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   box-shadow: 0 3px 20px 0 #0000003b;
 }
 button:hover{
   cursor: pointer;
+  box-shadow: 0 3px 20px 0 #f3f3a1;
 }
 
 @media only screen and (min-width: 750px) {
-
+  button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #fff;
+  }
 }
