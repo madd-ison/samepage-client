@@ -32,7 +32,7 @@ function Login() {
         <form onSubmit={handleSubmitJwtAuth}>
         <div>
             <label htmlFor='username'>
-                Username: 
+                Name: 
                 <input 
                     type="text" 
                     name="username"
