@@ -40,6 +40,30 @@
     box-shadow: 0 3px 20px 0 #383a383b;
 }
 
+#links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#links a {
+    text-decoration-line: none;
+    color: #000;
+}
+
+#links #signup-btn, #login-btn {
+    border: 3px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 20px;
+}
+
+@media only screen and (min-width: 450px) {
+    #links {
+        flex-direction: row;
+    }
+}
+
 @media only screen and (min-width: 750px) {
     #example {
         flex-direction: row;
