@@ -1,15 +1,15 @@
 import React from 'react'
 import {Switch} from 'react-router-dom'
-import './App.css';
-import LandingPage from '../LandingPage/LandingPage';
-import SignUp from '../SignUp/SignUp';
+import './App.css'
+import LandingPage from '../LandingPage/LandingPage'
+import SignUp from '../SignUp/SignUp'
 import DiscussionBoard from '../DiscussionBoard/DiscussionBoard'
 import Login from '../Login/Login'
 import PrivateRoute from '../utils/PrivateRoute'
 import PublicRoute from '../utils/PublicRoute'
 import TokenService from '../services/token-service'
 import Logout from '../Logout/Logout'
-import Header from '../Header/Header';
+import Header from '../Header/Header'
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
         </Switch>
       </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
