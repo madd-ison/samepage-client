@@ -24,6 +24,7 @@
     font-size: 12px;
 }
 ul {
+    text-align: left;
     width: 30%;
     margin: 10px auto;
     list-style-type: square;
