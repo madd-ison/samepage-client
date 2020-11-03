@@ -37,6 +37,7 @@ const SubmitPost = () => {
                         value={author}
                         onChange={e => setAuthor(e.target.value)} />
                     <br />
+                    <label htmlFor='your-message'>Your Message:</label>
                         <textarea value={content}
                         onChange={e => setContent(e.target.value)}>
                         </textarea>
