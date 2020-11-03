@@ -7,7 +7,7 @@ function LandingPage() {
     return (
             <div id='landing'>
                 <h2>Make sure you're on the</h2>
-                <h1 id='samepage'>samePage.</h1>
+                <Link to='/'><h1 id='samepage'>samePage.</h1></Link>
                     <h4>Free & easy. Start your group discussion now:</h4>
                     <div id='links'>
                         <Link to='/signup'><div id='signup-btn'>START YOUR PAGE</div></Link>

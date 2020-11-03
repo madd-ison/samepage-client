@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import './SignUp.css'
 import AuthApiService from '../services/auth-api-service'
 
@@ -25,19 +26,23 @@ function SignUp() {
   }
     return (
         <div id='signup-box'>
+        <Link to='/'><button>Back</button></Link>
+        <h2>Name your group or conversation and create a password. Share these login
+            credentials with whomever you'd like to join in!</h2>
             <form id='signup-form' onSubmit={handleSubmit}>
-                <label htmlFor='username'>Name your conversation:</label>
+                <label htmlFor='username'>Name:</label>
                 <br />
                     <input 
                         id='user-name'
                         type='text' 
                         name='username'
                         value={username}
+                        placeholder='i.e. google-hq'
                         onChange={e => setUsername(e.target.value)}
                         required
                     />
                 <br />
-                <label htmlFor='password'>Create a password to share with your team:</label>
+                <label htmlFor='password'>Password:</label>
                 <br /> 
                 <input
                     id='user-password'

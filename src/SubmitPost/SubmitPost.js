@@ -11,6 +11,9 @@ const SubmitPost = () => {
         e.preventDefault()
         try {
             const newMessage = {content, author}
+            if(!content) {
+                alert('You forgot to type your message!')
+            }
             await fetch(`${config.API_ENDPOINT}/api/messages`, {
                 method: "POST",
                 headers: {

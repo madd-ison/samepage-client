@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import TokenService from '../services/token-service'
 import AuthApiService from '../services/auth-api-service'
 import './Login.css'
@@ -28,8 +29,11 @@ function Login() {
       } 
     }
     return (
-        <section className='login-form'>
-        <form onSubmit={handleSubmitJwtAuth}>
+        <section className='login'>
+        <Link to='/'><div id='back'>Back</div></Link>
+        <h2>Join the conversation! Log in using the unique credentials
+          provided by the conversation starter.</h2>
+        <form id='login-form' onSubmit={handleSubmitJwtAuth}>
             <label htmlFor='username'>
                 Name: </label>
                 <br />
@@ -37,6 +41,7 @@ function Login() {
                     type="text" 
                     name="username"
                     value={username}
+                    placeholder='i.e. google-hq'
                     onChange={e => setUsername(e.target.value)}
                     required 
                     />
