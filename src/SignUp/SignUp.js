@@ -27,8 +27,9 @@ function SignUp() {
     return (
         <div id='signup-box'>
         <Link to='/'><button>Back</button></Link>
-        <h2>Name your group or conversation and create a password. Share these login
-            credentials with whomever you'd like to join in!</h2>
+        <h2>Create a discussion board with a unique name and password
+            to share with whomever you'd like to join the
+            conversation!</h2>
             <form id='signup-form' onSubmit={handleSubmit}>
                 <label htmlFor='username'>Name:</label>
                 <br />

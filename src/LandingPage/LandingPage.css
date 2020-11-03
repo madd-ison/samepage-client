@@ -13,10 +13,12 @@
 }
 
 #samepage {
-    border: 3px solid black;
+    border: 4px solid black;
     width: 50%;
     margin: 10px auto;
+    box-shadow: 0 3px 20px 0 #383a383b;
 }
+
 #example {
     display: flex;
     flex-direction: column;
@@ -31,8 +33,9 @@
     margin-bottom: 10px;
 }
 
-#ex-text {
+#ex-text h1 {
     margin-bottom: 20px;
+    text-shadow: 2px 5px 3px #383a383b;
 }
 
 #example img {
@@ -55,7 +58,9 @@
 }
 
 #signup-btn:hover, #login-btn:hover {
-    box-shadow: 0 3px 20px 0 #f3f3a1;
+    background: #f3f3a1;
+    box-shadow: 0 3px 20px 0 #383a383b;
+    transform: translate(0px, 10px);
 }
 
 #links #signup-btn, #login-btn {
@@ -78,9 +83,12 @@
     }
     #ex-text {
         max-width: 30%;
-        line-height: 80px;
     }
-    
+
+    #ex-text h1 {
+        line-height: 70px;
+    }
+
     #ex-img {
         max-width: 60%;
     }

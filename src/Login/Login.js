@@ -31,8 +31,9 @@ function Login() {
     return (
         <section className='login'>
         <Link to='/'><div id='back'>Back</div></Link>
-        <h2>Join the conversation! Log in using the unique credentials
-          provided by the conversation starter.</h2>
+        <h2>Join the discussion!</h2>
+        <p>Log in using the unique credentials
+          provided by the conversation starter.</p>
         <form id='login-form' onSubmit={handleSubmitJwtAuth}>
             <label htmlFor='username'>
                 Name: </label>
