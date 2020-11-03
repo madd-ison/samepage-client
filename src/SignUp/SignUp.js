@@ -60,7 +60,7 @@ function SignUp() {
                     <li>A number</li>
                     <li>A special character (i.e. $!@)</li>
                 </ul>
-                <button type='submit'>Start Planning!</button>
+                <button type='submit'>Go!</button>
             </form>
         </div>
     )
