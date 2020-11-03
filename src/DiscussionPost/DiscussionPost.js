@@ -8,7 +8,7 @@ const DiscussionPost = () => {
 
     const [messages, setMessages] = useState([])
 
-
+    // delete selected post
     const deletePost = async (id) => {
         try {
             await fetch(`${config.API_ENDPOINT}/api/messages/${id}`, {
@@ -26,6 +26,7 @@ const DiscussionPost = () => {
         }
     }
 
+    // get all messages for id that matches logged in user id
     const getMessages = async () => {
         try {
             const response = await fetch(`${config.API_ENDPOINT}/api/messages`, {
