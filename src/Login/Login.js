@@ -30,7 +30,7 @@ function Login() {
     }
     return (
         <section className='login'>
-        <Link to='/'><div id='back'>Back</div></Link>
+        <Link to='/'><button id='back'>Back</button></Link>
         <h2>Join the discussion!</h2>
         <p>Log in using the unique credentials
           provided by the conversation starter.</p>
